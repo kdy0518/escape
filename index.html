@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>도윤의 방탈출 이벤트</title>
+  <style>
+    body {
+      font-family: 'Arial';
+      background: #fdf6f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 너만을 위한 미션이야 💌</h1>
+  <p>우리가 처음 데이트한 장소는?</p>
+  <input type="text" id="answer" placeholder="정답 입력...">
+  <button onclick="checkAnswer()">확인</button>
+  <div id="result"></div>
+
+  <script>
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.trim();
+      const correct = "한강"; // 여기에 정답을 원하는 대로 바꿔도 돼!
+      if (userAnswer === correct) {
+        document.getElementById("result").innerHTML = "정답이야! 다음 단계로 가볼까? 👉 <a href='next.html'>Go!</a>";
+      } else {
+        document.getElementById("result").innerText = "음... 다시 생각해봐!";
+      }
+    }
+  </script>
+</body>
+</html>
